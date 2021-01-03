@@ -23,7 +23,7 @@ Components: {
 
 <style scoped lang="sass">
 
-#cases
+section
 	width: 80%
 	display: flex
 	flex-direction: column

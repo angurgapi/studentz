@@ -10,7 +10,7 @@
         <p>Если мы впервые начинаем говорить про какой-то предмет или существо, понадобится неопределенный артикль:
         	<div class='example-indefinite'>
         	<p>I see <span class='highlighted'>a</span> cat! ("Я вижу кошку" - скажем мы, выглянув из окна. <span class='smaller'>Это незнакомая кошка.</span> )</p>
-        	<img src='/img/unnamed.jpg'/>
+        	<img src='/img/articles/window.jpg'/>
         	</div>
         </div>
       
@@ -19,25 +19,27 @@
         	<div class='example-definite'>
         	<p><span class='highlighted'>The</span> cat is licking its leg! ("Кошка <span class='smaller'>
         	<<i>про которую мы только что уже говорили</i>></span> лижет свою лапку!")</p>
-        	<img src="/img/tenor.gif"/>
-        </div>
+        	<img src="/img/articles/cat.gif"/>
+        	</div>
       	</div>
       </div>
 
-       <p>Бывают ситуации, когда <span class='highlighted'>артикль не нужен</span>, потому что перед существительным уже есть какое-то слово, заменяющее артикль: притяжательное местоимение (my, his, her итд.), this или that, любое числительное (one, two, three). Например: <br>I have a sister. (У меня есть сестра) - <i>нужен</i><br>
+       <p>Бывают ситуации, когда <span class='highlighted'>артикль не нужен</span>, потому что перед существительным уже есть какое-то слово, заменяющее артикль: притяжательное местоимение (my, his, her итд.), this или that, любое числительное (one, two, three). Например: 
+       	<div class='examples-block'><p>I have a sister. (У меня есть сестра) - <i>нужен</i><br>
         <span class='highlighted'>My</span> sister is beautiful. (<span class='highlighted'>Моя</span> сестра красивая) - <i>не нужен</i><br>
         I have <span class='highlighted'>one</span> sister. (У меня есть <span class='highlighted'>одна</span> сестра) - <i>не нужен</i><br>
+    </p></div>
 
-        <br>Еще нам не понадобится артикль a/an перед существительными во множественном числе: <br> I have a book. У меня есть книга. /
+        <p><br>Еще нам не понадобится артикль a/an перед существительными во множественном числе: <br> I have a book. У меня есть книга. /
        I have books. У меня есть книги.</p>
 
-
     </div>
+    <Articles />
   </div>
 </template>
 
 <script>
-
+import Articles from '@/components/Articles'
 export default {
   
 }
@@ -49,6 +51,7 @@ export default {
 	display: flex
 	flex-direction: column
 	justify-content: center
+	margin-bottom: 30px
 	p
 		font-size: 20px
 		margin: auto
@@ -59,7 +62,10 @@ export default {
 	display: flex
 	flex-direction: row
 	justify-content: space-between
-
+.examples-block
+	display: flex
+	flex-direction: column
+	justify-content: center
 .definite, .indefinite
 	display: flex
 	flex-direction: column
@@ -84,6 +90,7 @@ img
 	.examples, .example-indefinite, .example-definite
 		flex-direction: column
 		justify-content: center
+		align-items: center
 	.definite, .indefinite
 		width: 100%
 

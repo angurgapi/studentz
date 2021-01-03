@@ -39,6 +39,12 @@ html
   justify-content: center
   align-items: center
 
+.question-headline
+  margin: 30px auto
+  text-align: center
+  font-size: 32px
+  color: rgba(53, 43, 59,.8)
+
 .rare
   letter-spacing: 1rem
 h2

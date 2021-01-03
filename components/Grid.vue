@@ -2,7 +2,7 @@
 <div class='main-block'>
  <div class="app">
   <div v-for="(option) in allOptions" class="question_block" :style="`background-color: ${option.blockColor}`">
-      <h3 class='question__headline'>{{ option.questionTitle }} </h3>    
+      <h3 class='question-headline'>{{ option.questionTitle }} </h3>    
       <div class="choice-grid">
         <div class="image-wrapper" v-for='(position) in option.choices' :value='`${position.value}`'
         @click='select(position.value, option.name)'>
@@ -104,7 +104,7 @@
 } 
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 
 
 @font-face
@@ -151,12 +151,6 @@ img
   margin: 15px auto
   width: 350px
   height: 350px
-
-h3
-  font-size: 20px
-  max-width: 95%
-  margin: auto
-  margin-bottom: 3rem
 
 h4
   margin-top: -1.3rem
@@ -207,12 +201,6 @@ h4
   .bad-verdict
     font-size: 1.5rem
     line-height: 1.6rem
-
-.question__headline
-  margin: 20px auto
-  text-align: center
-  font-size: 1.5rem
-  color: rgba(53, 43, 59,.8)
 
 .submit
   margin:1rem auto 1rem auto

@@ -83,6 +83,6 @@
    
   .nav-link
     a
-      font-size: 22px    
+      font-size: 17px    
   
 </style>

@@ -2,7 +2,8 @@
   <div class="page-wrapper">
     
     <div class='about'>
-      <p>привет and welcome</p>      
+      <h2 class="section-headline">привет and welcome</h2>    
+      <img class='section-greeting' src='/img/hey.jpg'/>  
     </div>    
 
 
@@ -28,8 +29,16 @@ export default {
     font-weight: 500
     font-display: swap
     src: url('~assets/fonts/Pangolin.ttf') format('truetype')
+.about
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
-
+.section-greeting
+  margin-top: 40px
+  width: 90%
+  height: auto
 
 p
   font-family: 'Pangolin'
