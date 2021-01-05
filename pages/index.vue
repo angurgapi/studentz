@@ -24,16 +24,13 @@ export default {
 <style lang='sass'>
 
 @font-face
-    font-family: 'Pangolin'
-    font-style: normal
-    font-weight: 500
-    font-display: swap
-    src: url('~assets/fonts/Pangolin.ttf') format('truetype')
+  font-family: 'Pangolin'
+  font-style: normal
+  font-weight: 500
+  font-display: swap
+  src: url('~assets/fonts/Pangolin.ttf') format('truetype')
 .about
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  @include flexcolumncenter
 
 .section-greeting
   margin-top: 40px
@@ -44,6 +41,5 @@ p
   font-family: 'Pangolin'
   font-size: 26px
   text-align: justify
-
 
 </style>

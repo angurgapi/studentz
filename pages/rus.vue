@@ -14,7 +14,7 @@
 import Grid from '@/components/Grid'
 export default {
 Components: {
-	grid:Grid
+  grid:Grid
 }
 
 }
@@ -24,8 +24,8 @@ Components: {
 <style scoped lang="sass">
 
 section
-	width: 80%
-	display: flex
-	flex-direction: column
+  width: 80%
+  display: flex
+  flex-direction: column
 
 </style>

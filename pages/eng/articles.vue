@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Articles from '@/components/Articles'
+	import Articles from '@/components/Articles'
 export default {
   
 }
@@ -47,52 +47,52 @@ export default {
 
 <style scoped lang='sass'>
 .theory
-	width: 90%
-	display: flex
-	flex-direction: column
-	justify-content: center
-	margin-bottom: 30px
-	p
-		font-size: 20px
-		margin: auto
+  width: 90%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-bottom: 30px
+  p
+    font-size: 20px
+    margin: auto
 
 .examples
-	margin-top: 30px
-	width: 100%
-	display: flex
-	flex-direction: row
-	justify-content: space-between
+  margin-top: 30px
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
 .examples-block
-	display: flex
-	flex-direction: column
-	justify-content: center
+  display: flex
+  flex-direction: column
+  justify-content: center
 .definite, .indefinite
-	display: flex
-	flex-direction: column
-	width: 48%
-	border: 2px dotted black
-	padding: 5px
-	height: 100%
+  display: flex
+  flex-direction: column
+  width: 48%
+  border: 2px dotted black
+  padding: 5px
+  height: 100%
 .example-definite
-	p
-		margin-right: 10px
+  p
+    margin-right: 10px
 .example-indefinite, .example-definite
-	display: flex
-	flex-direction: row
+  display: flex
+  flex-direction: row
 img
-	width: 200px
-	height: auto
+  width: 200px
+  height: auto
 .smaller
-	font-size: 16px
+  font-size: 16px
 .highlighted
-	color: rgba(135, 12, 55, .8)
+  color: rgba(135, 12, 55, .8)
 @media(max-width: 500px)
-	.examples, .example-indefinite, .example-definite
-		flex-direction: column
-		justify-content: center
-		align-items: center
-	.definite, .indefinite
-		width: 100%
+  .examples, .example-indefinite, .example-definite
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .definite, .indefinite
+    width: 100%
 
 
 </style>

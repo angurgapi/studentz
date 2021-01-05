@@ -108,17 +108,14 @@
 
 
 @font-face
-    font-family: 'Rubik'
-    font-weight: 600
-    src: url('~assets/fonts/Rubik.ttf')
+  font-family: 'Rubik'
+  font-weight: 600
+  src: url('~assets/fonts/Rubik.ttf')
 
 
 .app
   width: 100%
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  @include flexcolumncenter
 
 .choice-grid
   width: 100%
@@ -129,10 +126,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 
 .image-wrapper
+  @include flexcolumncenter
   background-color: ghostwhite
-  display: flex
-  align-items: center
-  flex-direction: column
   height: 440px
   width: 370px
   margin: auto
@@ -142,7 +137,7 @@
   font-size: 1.5rem
   font-weight: 600
   text-transform: uppercase
-  color: rgba(53, 43, 59,.8)
+  color: $transblack
   position: relative
   bottom: 6px
   margin: 0
@@ -160,10 +155,7 @@ h4
 
 .question_block
   width: 100%
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  @include flexcolumncenter
 
 .results
   margin: 1rem auto 2rem auto
@@ -187,7 +179,7 @@ h4
   justify-content: center
   font-size: 3rem
   font-weight: 700
-  color: #b01a4f
+  color: $cherry
   display: none
   img
     margin: 0
@@ -210,19 +202,19 @@ h4
   width: 180px
   height: 50px
   border-radius: 2rem
-  border: solid 3px #570b29
-  background-color: #bcebf7
-  box-shadow: 0 5px rgba(0,0,0,.3)
+  border: solid 3px $shadow
+  background-color: $azure
+  box-shadow: 0 5px $shadow
 
 .image-wrapper:hover
-  background-color: rgba(0,0,0,.2)
+  background-color: $shadow
   p
     color: white
 
 
 .selected
-  background-color: rgba(156, 31, 6,.4)
-  color: white
+  background-color: $selected
+  color: #fff
 
 @media(max-width: 500px)
   .question__headline

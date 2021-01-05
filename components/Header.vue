@@ -6,7 +6,10 @@
           <ul class="navlist">
             <li class="nav-link"><NuxtLink to='/'>домой</NuxtLink></li>
             <li class="nav-link"><NuxtLink to='/rus'>русский</NuxtLink></li>
-            <li class="nav-link"><NuxtLink to='/eng'>английский</NuxtLink></li>
+            <li class="nav-link" @click='processClick()'>
+              <NuxtLink to='/eng'>английский</NuxtLink>
+              <Engbar />
+            </li>
           </ul>
         </div>
       </div>
@@ -14,13 +17,13 @@
  </div>
 </template>
 
-<style lang='sass'>
+<style lang='sass' scoped>
 @font-face
-    font-family: 'Rubik'
-    font-style: normal
-    font-weight: 500
-    font-display: swap
-    src: url('~assets/fonts/Rubik.ttf') format('truetype')
+  font-family: 'Rubik'
+  font-style: normal
+  font-weight: 500
+  font-display: swap
+  src: url('~assets/fonts/Rubik.ttf') format('truetype')
 
 
 .header
@@ -28,7 +31,7 @@
   height: 70px
   display: flex
   flex-direction: column
-  background: #faed7a
+  background: $egg
   margin-bottom: 50px
 
 .navpannel
@@ -47,30 +50,32 @@
 
 
 .navlist
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-direction: row
+  list-style: none
+  padding-left: 0
+  li
     display: flex
-    align-items: center
-    justify-content: space-between
-    flex-direction: row
-    list-style: none
-    padding-left: 0
+    flex-direction: column
 
 .nav-link a
   text-decoration: none
   font-family: Rubik
   letter-spacing: 3px
-  color: rgba(0,0,0,.7)
   font-size: 20px
   font-weight: 500
-  color: rgba(0,0,0,.7)
+  color: $transblack
   margin-right: 10px
 
 
-.nuxt-link, .nuxt-link-active
-  text-decoration: none
-  color: black
+// .nuxt-link, .nuxt-link-active
+//   text-decoration: none
+//   color: black
 
 .nav-link .nuxt-link-exact-active
-  color: rgba(135, 12, 55, .6)
+  color: $cherry
 
 @media(max-width: 800px)
   .nav-link
@@ -86,3 +91,20 @@
       font-size: 17px    
   
 </style>
+<script>
+  import Engbar from '@/components/Engbar'
+  export default{
+    methods:{
+      processClick(){        
+        let engBar = document.querySelector('.engbar')       
+        if (engBar.style.display == 'flex'){
+          engBar.style.display = 'none'
+        }
+        else{
+          engBar.style.display = 'flex'
+        }
+      }
+      
+    }
+  }
+</script>

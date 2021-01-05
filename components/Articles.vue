@@ -9,9 +9,6 @@
 					<h4 class='opt'>{{ choice }}</h4>
 				</div>	
 			</div>
-			
-
-
 		</div>
 	</div>
 </template>
@@ -56,46 +53,41 @@
 </script>
 
 <style lang='sass' scoped>
-	.articles-test
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
-	.options
-		width: 100%
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		margin-bottom: 30px
-	.opt-wrapper
-		display: flex
-		justify-content: center
-		align-items: center
-		height: 40px
-		padding: 6px
-		border-radius: 15%
-		background-color: rgba(192, 230, 240, .6)
-		box-shadow: 0 5px rgba(0,0,0,.3)
-	.question-image
-		width: 60%
-		height: auto
-		margin-bottom: 25px
-	.opt
-		font-size: 22px
-		text-align: center
-	.wrong-opt
-		background-color: rgba(201, 48, 64, .7)
-		color: #fff
-	.true-opt
-		background-color: rgba(17, 156, 26, .7)
-		color: #fff
-	@media(max-width: 550px)
-		.question-image
-			width: 80%
-		.opt-wrapper
-			height: 70px
-			width: 30%
-			.opt
-				font-size: 19px
-				font-weight: 300
+.articles-test
+  @include flexcolumncenter
+.options
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  margin-bottom: 30px
+.opt-wrapper
+  @include flexcolumncenter
+  height: 40px
+  padding: 6px
+  border-radius: 15%
+  background-color: $azure
+  box-shadow: 0 5px $shadow
+.question-image
+  width: 60%
+  height: auto
+  margin-bottom: 25px
+.opt
+  font-size: 22px
+  text-align: center
+.wrong-opt
+  background-color: $wrong
+  color: #fff
+.true-opt
+  background-color: $correct
+  color: #fff
+@media(max-width: 550px)
+  .question-image
+    width: 80%
+  .opt-wrapper
+    height: 70px
+    width: 30%
+  .opt
+    font-size: 19px
+    font-weight: 300
 </style>

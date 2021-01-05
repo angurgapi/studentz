@@ -8,16 +8,18 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: './static/icons/icon.jpg' }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+  // '@/assets/scss/colors.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+  {src: '~/plugins/vueTyper.js', ssr: false}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -25,11 +27,19 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+  '@nuxtjs/style-resources',
   ],
-
+  styleResources: {
+    sass: ['@/assets/scss/colors.sass',
+        '@/assets/scss/mixins.sass'
+    ]
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+  
   ],
+
+  
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

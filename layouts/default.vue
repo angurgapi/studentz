@@ -21,7 +21,7 @@ html
   margin: 0
 
 .section-headline
-  color: rgba(135, 12, 55, .8)
+  color: $cherry
   font-family: Pangolin
   font-size: 32px
   text-align: center
@@ -43,13 +43,14 @@ html
   margin: 30px auto
   text-align: center
   font-size: 32px
-  color: rgba(53, 43, 59,.8)
+  color: $darkcherry
+  letter-spacing: 3px
 
 .rare
   letter-spacing: 1rem
 h2
   font-family: 'Oswaldd'
-  color: rgba(135, 12, 55, 0.8)
+  color: $darkcherry
 @media(max-width:500px)
   .section-headline
     font-size: 25px
